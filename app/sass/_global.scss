@@ -1,0 +1,25 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Lexend Deca, sans-serif;
+    background-color:$VeryDarkBlue;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,h2,h3,h4{
+    margin:0;
+}
