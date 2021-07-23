@@ -14,7 +14,7 @@ body{
     font-weight: 400;
     font-family: Lexend Deca, sans-serif;
     background-color:$VeryDarkBlue;
-    height: 100vh;
+    min-height: 100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -23,3 +23,7 @@ body{
 h1,h2,h3,h4{
     margin:0;
 }
+
+// .border-r{
+//     border-radius: 10px;
+// }

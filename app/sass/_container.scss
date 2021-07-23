@@ -1,27 +1,47 @@
 .container{
     background-color: $DarkDesaturated;
     margin:6rem 2rem 6rem 2rem;
-
+    max-width:430px;
+    border-radius: 15px;
+    // border-radius: 10px;
+    @include breakpoint-up(large){
+        display:flex;
+        max-width: 73.4rem;
+        
+    }
+    
     &__img{
-        height: 15.8rem;
+        height: 16rem;
         width: 100%;
+        background:url('/images/image-header-mobile.jpg');
         background-position: center;
         background-size:cover;
         position: relative;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
         &::before{
             position:absolute;
             content:'';
             width: 100%;
-            height: 15.8rem;
+            height: 16rem;
             background-color:#8A49B0;
             opacity:.4;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
             
         }
-        img{
-            
-            height: 100%;
-            width: 100%;
-
+        @include breakpoint-up(large){
+            order:2;
+            height: 26rem;
+            width:50%;
+            background:url('/images/image-header-mobile.jpg');
+            background-position: center;
+            background-size:cover;
+            border-radius: 0 15px 15px 0;
+            &::before{
+                height:100%;
+                border-radius: 0 15px 15px 0;
+            }
         }
         
     }
@@ -40,9 +60,48 @@
         p{
             color:$SlightlyTransparentWhite2;
             line-height: 1.7;
-            margin:24px 34px 48px 34px;
+            margin:1.6rem 2rem 3.2rem 2rem;
+            font-size: 1rem;
+            // font-weight: 400;    
         }
+        @include breakpoint-up(large){
+            text-align: left;
+            flex:1;
+            order:1;
+            width:50%;
+            padding-left:2.533rem;
+            padding-right: 4.66rem;
+            .stats{
+                >div{
+                    &:not(:last-child){
+                        margin-right:3.6666rem;
+                    }
+                    &:first-child{
+                        margin-left:2rem;
+                    }
+                }
+                display:flex;
+            }
+            h1{
+                padding-top:3.4rem;
+            }
+            p{
+                margin-left: 1.5rem;
+            }
+        }
+        .stats{
+            font-family:Inter,sans-serif;
+            color:white ;
+            h2{
+                font-weight: 700;
+            }
+            p{
+                margin:0.8rem 0 2.266rem 0;
+            }
+        }
+        
     }
+    
     
    
 }
